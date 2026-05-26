@@ -67,14 +67,5 @@ public class DaoCliente {
         
         
     }
-    public static void main(String[] args) throws IOException, FileNotFoundException, ClassNotFoundException {
-        
-          
-        DaoCliente lec = new DaoCliente();
-        List<Cliente> lista= lec.listar();
-         for (Cliente cliente : lista) {
-         System.out.println("} "+cliente.toString());
-        }
-    }
 }
 

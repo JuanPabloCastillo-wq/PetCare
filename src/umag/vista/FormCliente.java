@@ -283,7 +283,24 @@ public class FormCliente extends javax.swing.JFrame {
     String direccionClienteStr = Direccion.getText();
     int telefonoClienteInt = Integer.parseInt(Telefono.getText());
 
-    
+    boolean mascotaDuplicada = false;
+try (java.io.ObjectInputStream ois = new java.io.ObjectInputStream(new java.io.FileInputStream("Mascotas.dat"))) {
+    java.util.List<umag.modelo.entidad.Mascota> mascotas = (java.util.List<umag.modelo.entidad.Mascota>) ois.readObject();
+    for (umag.modelo.entidad.Mascota m : mascotas) {
+        if (m.getId().equals(idMascotaStr)) { // Revisa si el ID de la mascota ya existe
+            mascotaDuplicada = true;
+            break;
+        }
+    }
+} catch (Exception e) { /* Si el archivo no existe, no hay duplicados */ }
+if (mascotaDuplicada) {
+    javax.swing.JOptionPane.showMessageDialog(this, "Error: Esta mascota ya se encuentra registrada.");
+    return; // Detiene la ejecución del registro
+}
+if (mascotaDuplicada) {
+    javax.swing.JOptionPane.showMessageDialog(this, "Error: Esta mascota ya se encuentra registrada.");
+    return; // Detiene la ejecución del registro
+}
     // 3. ENVIAR A LOS CONTROLADORES
     boolean mascotaGuardada = umag.control.ControlMascota.getInstance().guardarMascota(
     razaMascota, 

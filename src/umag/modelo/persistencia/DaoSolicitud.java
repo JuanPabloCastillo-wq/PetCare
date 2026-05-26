@@ -46,5 +46,13 @@ public class DaoSolicitud {
     }
     return lista;
     }
+    public boolean actualizarTodas(java.util.List<Solicitud> listaNueva) {
+    try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Solicitudes.dat"))) {
+        oos.writeObject(listaNueva);
+        return true;
+    } catch (Exception e) {
+        return false;
+    }
+}
 }
 

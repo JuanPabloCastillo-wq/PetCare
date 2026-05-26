@@ -68,14 +68,5 @@ public class DaoPrestador {
         
         
     }
-    public static void main(String[] args) throws IOException, FileNotFoundException, ClassNotFoundException {
-        
-          
-        DaoPrestador lec = new DaoPrestador();
-        List<Prestador> lista= lec.listar();
-         for (Prestador prestador : lista) {
-         System.out.println("} "+prestador.toString());
-        }
-    }
 } 
 
