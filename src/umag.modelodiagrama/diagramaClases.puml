@@ -1,0 +1,47 @@
+@startuml
+ package Vista{
+  class FormSolicitud
+  class FormCliente
+  class FormPrestador
+}
+ package Modelo{
+  package Entidad{
+    class Servicioo
+    class Persona
+    class Cliente 
+    class Mascota
+    class Prestador
+    class Solicitud
+}
+ package Servicio{
+  class ServicioCliente
+  class ServicioServicio
+  class ServicioPrestador
+  class ServicioSolicitud
+}
+ package Persistencia{
+  class DaoCliente
+  class DaoPrestador
+  class DaoSolicitud
+  class DaoServicio
+  
+}
+}
+ package Control{
+  class ControlPrestador
+  class ControlCliente 
+  class ControlServicio
+  class ControlSolicitud
+}
+Vista ..> Control
+Control ..> Modelo
+Cliente -up-|> Persona
+Prestador -up-|> Persona
+ServicioCliente *-- DaoCliente
+ServicioPrestador *-- DaoPrestador
+ServicioSolicitud *-- DaoSolicitud
+ServicioServicio *-- DaoServicio
+Solicitud "1" o-- "1" Persona
+Cliente *-- Mascota
+Prestador *-- Servicioo
+@enduml
