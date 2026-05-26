@@ -14,8 +14,8 @@ import umag.modelo.servicio.ServicioServicio;
 public class ControlServicio {
          ServicioServicio servicio = new ServicioServicio();
          public boolean guardarServicio(String tiposervicio, String descripcióndelservicio, int preciobase, int duración){
-         boolean res3= servicio.guardar(tiposervicio, descripcióndelservicio, preciobase, duración);
-         return res3;
+         boolean res= servicio.guardar(tiposervicio, descripcióndelservicio, preciobase, duración);
+         return res;
      }
     
     // 1. Atributo estático privado para la instancia única
