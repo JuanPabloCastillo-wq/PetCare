@@ -28,18 +28,101 @@ public class FormPrestador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel1 = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
+        txtNombre = new javax.swing.JTextField();
+        lblEmail = new javax.swing.JLabel();
+        txtTelefono = new javax.swing.JTextField();
+        lblId = new javax.swing.JLabel();
+        lblMascota = new javax.swing.JLabel();
+        lblTelefono = new javax.swing.JLabel();
+        lblMetododepago = new javax.swing.JLabel();
+        lblDireccion = new javax.swing.JLabel();
+        lblEdad = new javax.swing.JLabel();
+        txtMascota = new javax.swing.JTextField();
+        txtEmail = new javax.swing.JTextField();
+        txtDireccion = new javax.swing.JTextField();
+        txtId = new javax.swing.JTextField();
+        txtEdad = new javax.swing.JTextField();
+        txtMetododepago = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        btnRegistrardatos = new javax.swing.JButton();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 510, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 381, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setText("Datos Prestador");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(170, 10, 140, 25);
+
+        lblNombre.setText("Nombre:");
+        getContentPane().add(lblNombre);
+        lblNombre.setBounds(60, 60, 50, 16);
+
+        txtNombre.addActionListener(this::txtNombreActionPerformed);
+        getContentPane().add(txtNombre);
+        txtNombre.setBounds(120, 60, 200, 22);
+
+        lblEmail.setText("Email:");
+        getContentPane().add(lblEmail);
+        lblEmail.setBounds(80, 180, 40, 20);
+        getContentPane().add(txtTelefono);
+        txtTelefono.setBounds(130, 270, 180, 22);
+
+        lblId.setText("Id:");
+        getContentPane().add(lblId);
+        lblId.setBounds(90, 90, 30, 20);
+
+        lblMascota.setText("Cedula:");
+        getContentPane().add(lblMascota);
+        lblMascota.setBounds(70, 150, 50, 20);
+
+        lblTelefono.setText("Telefono:");
+        getContentPane().add(lblTelefono);
+        lblTelefono.setBounds(70, 270, 80, 20);
+
+        lblMetododepago.setText("banco:");
+        getContentPane().add(lblMetododepago);
+        lblMetododepago.setBounds(80, 240, 110, 20);
+
+        lblDireccion.setText("Direccion:");
+        getContentPane().add(lblDireccion);
+        lblDireccion.setBounds(60, 210, 60, 20);
+
+        lblEdad.setText("Edad:");
+        getContentPane().add(lblEdad);
+        lblEdad.setBounds(80, 120, 30, 20);
+        getContentPane().add(txtMascota);
+        txtMascota.setBounds(120, 150, 160, 22);
+        getContentPane().add(txtEmail);
+        txtEmail.setBounds(120, 180, 190, 22);
+        getContentPane().add(txtDireccion);
+        txtDireccion.setBounds(120, 210, 190, 22);
+        getContentPane().add(txtId);
+        txtId.setBounds(120, 90, 150, 22);
+        getContentPane().add(txtEdad);
+        txtEdad.setBounds(120, 120, 50, 22);
+        getContentPane().add(txtMetododepago);
+        txtMetododepago.setBounds(130, 240, 130, 22);
+
+        jLabel2.setText("Disponibilidad:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(40, 310, 80, 16);
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane1);
+        jScrollPane1.setBounds(130, 306, 320, 60);
+
+        btnRegistrardatos.setText("Registrar datos");
+        btnRegistrardatos.addActionListener(this::btnRegistrardatosActionPerformed);
+        getContentPane().add(btnRegistrardatos);
+        btnRegistrardatos.setBounds(335, 100, 110, 23);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -78,5 +161,26 @@ public class FormPrestador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRegistrardatos;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblDireccion;
+    private javax.swing.JLabel lblEdad;
+    private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblId;
+    private javax.swing.JLabel lblMascota;
+    private javax.swing.JLabel lblMetododepago;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblTelefono;
+    private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextField txtEdad;
+    private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtMascota;
+    private javax.swing.JTextField txtMetododepago;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }

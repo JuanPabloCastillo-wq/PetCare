@@ -45,70 +45,102 @@ public class FormCliente extends javax.swing.JFrame {
         txtId = new javax.swing.JTextField();
         txtEdad = new javax.swing.JTextField();
         txtMetododepago = new javax.swing.JTextField();
-        btnRegistrardatos = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        lblNombre1 = new javax.swing.JLabel();
+        txtNombre1 = new javax.swing.JTextField();
+        lblEmail1 = new javax.swing.JLabel();
+        txtTelefono1 = new javax.swing.JTextField();
+        lblId1 = new javax.swing.JLabel();
+        lblMascota1 = new javax.swing.JLabel();
+        lblTelefono1 = new javax.swing.JLabel();
+        lblMetododepago1 = new javax.swing.JLabel();
+        lblDireccion1 = new javax.swing.JLabel();
+        lblEdad1 = new javax.swing.JLabel();
+        txtMascota1 = new javax.swing.JTextField();
+        txtEmail1 = new javax.swing.JTextField();
+        txtDireccion1 = new javax.swing.JTextField();
+        txtId1 = new javax.swing.JTextField();
+        txtEdad1 = new javax.swing.JTextField();
+        txtMetododepago1 = new javax.swing.JTextField();
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setText("Datos Cliente");
+
+        lblNombre.setText("Nombre:");
+
+        txtNombre.addActionListener(this::txtNombreActionPerformed);
+
+        lblEmail.setText("Email:");
+
+        lblId.setText("Id:");
+
+        lblMascota.setText("Macota:");
+
+        lblTelefono.setText("Telefono:");
+
+        lblMetododepago.setText("Metodo de pago:");
+
+        lblDireccion.setText("Direccion:");
+
+        lblEdad.setText("Edad:");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Datos Cliente");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(170, 10, 110, 25);
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setText("Datos Cliente");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(170, 10, 110, 25);
 
-        lblNombre.setText("Nombre:");
-        getContentPane().add(lblNombre);
-        lblNombre.setBounds(60, 60, 50, 16);
+        lblNombre1.setText("Nombre:");
+        getContentPane().add(lblNombre1);
+        lblNombre1.setBounds(60, 60, 50, 16);
 
-        txtNombre.addActionListener(this::txtNombreActionPerformed);
-        getContentPane().add(txtNombre);
-        txtNombre.setBounds(120, 60, 200, 22);
+        txtNombre1.addActionListener(this::txtNombre1ActionPerformed);
+        getContentPane().add(txtNombre1);
+        txtNombre1.setBounds(120, 60, 200, 22);
 
-        lblEmail.setText("Email:");
-        getContentPane().add(lblEmail);
-        lblEmail.setBounds(80, 180, 40, 20);
-        getContentPane().add(txtTelefono);
-        txtTelefono.setBounds(130, 270, 180, 22);
+        lblEmail1.setText("Email:");
+        getContentPane().add(lblEmail1);
+        lblEmail1.setBounds(80, 180, 40, 20);
+        getContentPane().add(txtTelefono1);
+        txtTelefono1.setBounds(130, 270, 180, 22);
 
-        lblId.setText("Id:");
-        getContentPane().add(lblId);
-        lblId.setBounds(90, 90, 30, 20);
+        lblId1.setText("Id:");
+        getContentPane().add(lblId1);
+        lblId1.setBounds(90, 90, 30, 20);
 
-        lblMascota.setText("Macota:");
-        getContentPane().add(lblMascota);
-        lblMascota.setBounds(70, 150, 50, 20);
+        lblMascota1.setText("Macota:");
+        getContentPane().add(lblMascota1);
+        lblMascota1.setBounds(70, 150, 50, 20);
 
-        lblTelefono.setText("Telefono:");
-        getContentPane().add(lblTelefono);
-        lblTelefono.setBounds(70, 270, 80, 20);
+        lblTelefono1.setText("Telefono:");
+        getContentPane().add(lblTelefono1);
+        lblTelefono1.setBounds(70, 270, 80, 20);
 
-        lblMetododepago.setText("Metodo de pago:");
-        getContentPane().add(lblMetododepago);
-        lblMetododepago.setBounds(30, 240, 110, 20);
+        lblMetododepago1.setText("Metodo de pago:");
+        getContentPane().add(lblMetododepago1);
+        lblMetododepago1.setBounds(30, 240, 110, 20);
 
-        lblDireccion.setText("Direccion:");
-        getContentPane().add(lblDireccion);
-        lblDireccion.setBounds(60, 210, 60, 20);
+        lblDireccion1.setText("Direccion:");
+        getContentPane().add(lblDireccion1);
+        lblDireccion1.setBounds(60, 210, 60, 20);
 
-        lblEdad.setText("Edad:");
-        getContentPane().add(lblEdad);
-        lblEdad.setBounds(80, 120, 30, 20);
-        getContentPane().add(txtMascota);
-        txtMascota.setBounds(120, 150, 90, 22);
-        getContentPane().add(txtEmail);
-        txtEmail.setBounds(120, 180, 190, 22);
-        getContentPane().add(txtDireccion);
-        txtDireccion.setBounds(120, 210, 190, 22);
-        getContentPane().add(txtId);
-        txtId.setBounds(120, 90, 150, 22);
-        getContentPane().add(txtEdad);
-        txtEdad.setBounds(120, 120, 50, 22);
-        getContentPane().add(txtMetododepago);
-        txtMetododepago.setBounds(130, 240, 130, 22);
-
-        btnRegistrardatos.setText("Registrar datos");
-        btnRegistrardatos.addActionListener(this::btnRegistrardatosActionPerformed);
-        getContentPane().add(btnRegistrardatos);
-        btnRegistrardatos.setBounds(140, 330, 120, 23);
+        lblEdad1.setText("Edad:");
+        getContentPane().add(lblEdad1);
+        lblEdad1.setBounds(80, 120, 30, 20);
+        getContentPane().add(txtMascota1);
+        txtMascota1.setBounds(120, 150, 90, 22);
+        getContentPane().add(txtEmail1);
+        txtEmail1.setBounds(120, 180, 190, 22);
+        getContentPane().add(txtDireccion1);
+        txtDireccion1.setBounds(120, 210, 190, 22);
+        getContentPane().add(txtId1);
+        txtId1.setBounds(120, 90, 150, 22);
+        getContentPane().add(txtEdad1);
+        txtEdad1.setBounds(120, 120, 50, 22);
+        getContentPane().add(txtMetododepago1);
+        txtMetododepago1.setBounds(130, 240, 130, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -120,6 +152,10 @@ public class FormCliente extends javax.swing.JFrame {
     private void btnRegistrardatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrardatosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRegistrardatosActionPerformed
+
+    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombre1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -147,23 +183,39 @@ public class FormCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnRegistrardatos;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblDireccion;
+    private javax.swing.JLabel lblDireccion1;
     private javax.swing.JLabel lblEdad;
+    private javax.swing.JLabel lblEdad1;
     private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblEmail1;
     private javax.swing.JLabel lblId;
+    private javax.swing.JLabel lblId1;
     private javax.swing.JLabel lblMascota;
+    private javax.swing.JLabel lblMascota1;
     private javax.swing.JLabel lblMetododepago;
+    private javax.swing.JLabel lblMetododepago1;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNombre1;
     private javax.swing.JLabel lblTelefono;
+    private javax.swing.JLabel lblTelefono1;
     private javax.swing.JTextField txtDireccion;
+    private javax.swing.JTextField txtDireccion1;
     private javax.swing.JTextField txtEdad;
+    private javax.swing.JTextField txtEdad1;
     private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtEmail1;
     private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtId1;
     private javax.swing.JTextField txtMascota;
+    private javax.swing.JTextField txtMascota1;
     private javax.swing.JTextField txtMetododepago;
+    private javax.swing.JTextField txtMetododepago1;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNombre1;
     private javax.swing.JTextField txtTelefono;
+    private javax.swing.JTextField txtTelefono1;
     // End of variables declaration//GEN-END:variables
 }
