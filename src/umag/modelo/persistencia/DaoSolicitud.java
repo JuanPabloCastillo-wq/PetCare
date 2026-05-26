@@ -35,19 +35,16 @@ public class DaoSolicitud {
 
     
     public List<Solicitud> listar() throws IOException, ClassNotFoundException {
-        List<Solicitud> lista=new ArrayList<>();
-        FileInputStream file;
-        try {
-            file = new FileInputStream(archivo);
-            ObjectInputStream entrada=new ObjectInputStream(file);
-            lista= (List<Solicitud>) entrada.readObject();
-            
-        } catch (FileNotFoundException ex) {
-            System.out.println(" No existe archivo ");
-        }
-        return lista;
-        
-        
+        java.util.List<Solicitud> lista = new java.util.ArrayList<>();
+    java.io.FileInputStream file;
+    try {
+        file = new java.io.FileInputStream("Solicitudes.dat");
+        java.io.ObjectInputStream entrada = new java.io.ObjectInputStream(file);
+        lista = (java.util.List<Solicitud>) entrada.readObject();
+    } catch (java.io.FileNotFoundException ex) {
+        System.out.println("No existe archivo de solicitudes");
+    }
+    return lista;
     }
 }
 

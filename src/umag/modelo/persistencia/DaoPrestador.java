@@ -21,7 +21,7 @@ import umag.modelo.entidad.Servicio;
  */
 
 public class DaoPrestador {
-    private String archivo = "Prestador.dat";
+    private String archivo = "Prestadores.dat";
     
     public boolean guardar(Prestador prestador) throws FileNotFoundException, IOException, ClassNotFoundException{
         // aqui se guarda

@@ -58,8 +58,10 @@ public class FormSolicitud extends javax.swing.JPanel {
         jLabel4.setText("Comentarios:");
 
         btnRegistrar.setText("Enviar Solicitud");
+        btnRegistrar.addActionListener(this::btnRegistrarActionPerformed);
 
         btnVer.setText("Ver Solicitudes");
+        btnVer.addActionListener(this::btnVerActionPerformed);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -141,6 +143,80 @@ public class FormSolicitud extends javax.swing.JPanel {
     private void txtIdPrestadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdPrestadorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtIdPrestadorActionPerformed
+
+    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
+        try {
+        int idSol = Integer.parseInt(txtIdSolicitud.getText());
+        String comentario = txtComentario.getText();
+        String idCli = txtIdCliente.getText();
+        String idPres = txtIdPrestador.getText();
+
+        // 1. Buscar al cliente en el archivo de Clientes 
+        umag.modelo.entidad.Cliente clienteEncontrado = null;
+        try (java.io.ObjectInputStream ois = new java.io.ObjectInputStream(new java.io.FileInputStream("Clientes.dat"))) {
+            java.util.List<umag.modelo.entidad.Cliente> clientes = (java.util.List<umag.modelo.entidad.Cliente>) ois.readObject();
+            for (umag.modelo.entidad.Cliente c : clientes) {
+                
+                if (c.getId().equals(idCli)) { 
+                    clienteEncontrado = c;
+                    break;
+                }
+            }
+        } catch (Exception e) {}
+
+        // 2. Buscar al prestador en el archivo de Prestadores
+        umag.modelo.entidad.Prestador prestadorEncontrado = null;
+        try (java.io.ObjectInputStream ois = new java.io.ObjectInputStream(new java.io.FileInputStream("Prestadores.dat"))) { 
+            java.util.List<umag.modelo.entidad.Prestador> prestadores = (java.util.List<umag.modelo.entidad.Prestador>) ois.readObject();
+            for (umag.modelo.entidad.Prestador p : prestadores) {
+                
+                if (p.getId().equals(idPres)) { 
+                    prestadorEncontrado = p;
+                    break;
+                }
+            }
+        } catch (Exception e) {}
+
+        // 3. Validar y guardar
+        if (clienteEncontrado != null && prestadorEncontrado != null) {
+            umag.control.ControlSolicitud cs = new umag.control.ControlSolicitud();
+            boolean guardado = cs.guardarSolicitud(idSol, comentario, clienteEncontrado, prestadorEncontrado);
+            
+            if(guardado){
+                javax.swing.JOptionPane.showMessageDialog(this, "Solicitud registrada con éxito.");
+                txtIdSolicitud.setText(""); txtComentario.setText(""); txtIdCliente.setText(""); txtIdPrestador.setText("");
+            }
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error: No se encontró el Cliente o el Prestador con esos IDs.");
+        }
+
+    } catch (NumberFormatException e) {
+        javax.swing.JOptionPane.showMessageDialog(this, "El ID de la solicitud debe ser un número entero.");
+    }
+    }//GEN-LAST:event_btnRegistrarActionPerformed
+
+    private void btnVerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerActionPerformed
+        try {
+        umag.modelo.persistencia.DaoSolicitud dao = new umag.modelo.persistencia.DaoSolicitud();
+        
+        // Usamos tu método listar()
+        java.util.List<umag.modelo.entidad.Solicitud> solicitudes = dao.listar();
+        
+        // Cambia 'jTextArea1' por el nombre real de tu caja si le pusiste otro
+        jTextArea1.setText(""); 
+        
+        if(solicitudes.isEmpty()){
+            jTextArea1.append("No hay solicitudes registradas.\n");
+        } else {
+            for (umag.modelo.entidad.Solicitud s : solicitudes) {
+                jTextArea1.append("---------------------------------------------------\n");
+                jTextArea1.append(s.toString() + "\n");
+            }
+        }
+    } catch (Exception e) {
+        javax.swing.JOptionPane.showMessageDialog(this, "Error al leer el archivo: " + e.getMessage());
+    }
+    }//GEN-LAST:event_btnVerActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
