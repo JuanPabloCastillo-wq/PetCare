@@ -17,4 +17,21 @@ public class ControlServicio {
          boolean res3= servicio.guardar(tiposervicio, descripcióndelservicio, preciobase, duración);
          return res3;
      }
+    
+    // 1. Atributo estático privado para la instancia única
+    private static ControlServicio instancia;
+    private ServicioServicio servicioServicio;
+
+    // 2. Método público para obtener la instancia del Singleton
+    public static ControlServicio getInstance() {
+        if (instancia == null) {
+            instancia = new ControlServicio();
+        }
+        return instancia;
+    }
+
+    // 3. Constructor privado
+    private ControlServicio() {
+        servicioServicio = new ServicioServicio();
+    }
 }

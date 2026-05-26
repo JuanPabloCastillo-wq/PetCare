@@ -17,4 +17,5 @@ public class ControlCliente {
         boolean res= cliente.guardar(id, edad, nombre, mascota, email, direccion, teléfono);
         return res;
     }
+        
 }

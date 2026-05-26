@@ -15,7 +15,7 @@ import umag.modelo.persistencia.DaoCliente;
  * @author Castillo
  */
 public class ServicioCliente {
-    // Falta agregar el Dao
+    
     DaoCliente dao = new DaoCliente();
         public boolean guardar(String id, int edad, String nombre, Mascota mascota, String email, String direccion, int teléfono){
         if (mascota == null) {

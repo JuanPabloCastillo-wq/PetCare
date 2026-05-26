@@ -15,11 +15,11 @@ import umag.modelo.persistencia.DaoPrestador;
  * @author Castillo
  */
 public class ServicioPrestador {
-    // Falta agregar el Dao
+    
     DaoPrestador dao = new DaoPrestador();
-        public boolean guardar(String id, int cédula, int teléfono, int edad, String nombre, String email, String dirección, String banco, boolean disponibilidad, Servicio servicio){
-            int longitudCedula = String.valueOf(cédula).length();
-        if (cédula <= 0 || longitudCedula < 8 || longitudCedula > 10 || servicio == null ) {
+        public boolean guardar(String id, long cédula, long teléfono, int edad, String nombre, String email, String dirección, String banco, boolean disponibilidad, Servicio servicio){
+       
+        if (cédula <= 0 || servicio == null ) {
         return false;
         }else{
             try {
@@ -34,16 +34,5 @@ public class ServicioPrestador {
             return false;
         }
     }
-   //     public boolean actualizarDisponibilidad(String id, boolean disponibilidad) {
-    // Le pides el prestador al DAO usando su ID
-  //  Prestador p = daoPrestador.buscarPorId(idPrestador);
-    
-  //  if (p != null) {
-  //      p.setDisponibilidad(nuevoEstado); // Cambias el estado (true/false)
-  //      daoPrestador.actualizarArchivo(); // Le dices al DAO que guarde los cambios en el archivo .dat
- //       return true;
-  //  }
-   // return false;
-//}
 }
 

@@ -13,8 +13,9 @@ import umag.modelo.servicio.ServicioPrestador;
  */
 public class ControlPrestador {
      ServicioPrestador prestador = new ServicioPrestador();
-     public boolean guardarPrestador(String id, int cédula, int teléfono, int edad, String nombre, String email, String dirección, String banco, boolean disponibilidad, Servicio servicio){
+     public boolean guardarPrestador(String id, long cédula, long teléfono, int edad, String nombre, String email, String dirección, String banco, boolean disponibilidad, Servicio servicio){
         boolean res2= prestador.guardar(id, cédula, teléfono, edad, nombre, email, dirección, banco, disponibilidad, servicio);
         return res2;
     }
+     
 }

@@ -68,14 +68,7 @@ public class DaoCliente {
         
     }
     public static void main(String[] args) throws IOException, FileNotFoundException, ClassNotFoundException {
-        Cliente ob1 = new Cliente("112", 0, "Juan", new  Mascota("Puddle", "Max", 3, "Perro", 11, "Vacunado con no se", "131241234"), "Juan@gmail.com", "Carrera 10 calle 21",  321111111);
-        Cliente ob2 = new Cliente("100", 0, "Perez", new  Mascota("Eslovaco", "Tigger", 3, "Perro", 11, "Vacunado con Denge", "1322222"), "Perez@gmail.com", "Carrera 10 calle 12",  1111111);
-
-                
-        DaoCliente dao = new DaoCliente();
-        dao.guardar(ob1);
-        dao.guardar(ob2);
-        System.out.println("Se guardaron ");
+        
           
         DaoCliente lec = new DaoCliente();
         List<Cliente> lista= lec.listar();

@@ -12,8 +12,8 @@ import java.io.Serializable;
  */
 public class Prestador implements Serializable {
     private String id;
-    private int cédula;
-    private int teléfono;
+    private long cédula;
+    private long teléfono;
     private int edad;
     private String nombre;
     private String email;
@@ -22,7 +22,7 @@ public class Prestador implements Serializable {
     private boolean disponibilidad;
     private Servicio servicio;
 
-    public Prestador(String id, int cédula, int teléfono, int edad, String nombre, String email, String dirección, String banco, boolean disponibilidad, Servicio servicio) {
+    public Prestador(String id, long cédula, long teléfono, int edad, String nombre, String email, String dirección, String banco, boolean disponibilidad, Servicio servicio) {
         this.id = id;
         this.cédula = cédula;
         this.teléfono = teléfono;
@@ -61,7 +61,7 @@ public class Prestador implements Serializable {
     /**
      * @return the cédula
      */
-    public int getCédula() {
+    public long getCédula() {
         return cédula;
     }
 
@@ -75,7 +75,7 @@ public class Prestador implements Serializable {
     /**
      * @return the teléfono
      */
-    public int getTeléfono() {
+    public long getTeléfono() {
         return teléfono;
     }
 

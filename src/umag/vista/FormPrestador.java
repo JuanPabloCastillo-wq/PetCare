@@ -42,87 +42,127 @@ public class FormPrestador extends javax.swing.JFrame {
         txtMascota = new javax.swing.JTextField();
         txtEmail = new javax.swing.JTextField();
         txtDireccion = new javax.swing.JTextField();
-        txtId = new javax.swing.JTextField();
         txtEdad = new javax.swing.JTextField();
         txtMetododepago = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         btnRegistrardatos = new javax.swing.JButton();
+        txtId1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        Tiposervicio = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        Descripcionservicio = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        Precioservicio = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        Duracionservicio = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Datos Prestador");
+        jLabel1.setText("Servicios");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(170, 10, 140, 25);
+        jLabel1.setBounds(440, 10, 140, 25);
 
         lblNombre.setText("Nombre:");
         getContentPane().add(lblNombre);
-        lblNombre.setBounds(60, 60, 50, 16);
+        lblNombre.setBounds(80, 50, 50, 16);
 
         txtNombre.addActionListener(this::txtNombreActionPerformed);
         getContentPane().add(txtNombre);
-        txtNombre.setBounds(120, 60, 200, 22);
+        txtNombre.setBounds(130, 40, 200, 30);
 
         lblEmail.setText("Email:");
         getContentPane().add(lblEmail);
-        lblEmail.setBounds(80, 180, 40, 20);
+        lblEmail.setBounds(90, 200, 40, 20);
+
+        txtTelefono.addActionListener(this::txtTelefonoActionPerformed);
         getContentPane().add(txtTelefono);
-        txtTelefono.setBounds(130, 270, 180, 22);
+        txtTelefono.setBounds(130, 302, 180, 30);
 
         lblId.setText("Id:");
         getContentPane().add(lblId);
-        lblId.setBounds(90, 90, 30, 20);
+        lblId.setBounds(100, 90, 30, 20);
 
         lblMascota.setText("Cedula:");
         getContentPane().add(lblMascota);
-        lblMascota.setBounds(70, 150, 50, 20);
+        lblMascota.setBounds(80, 170, 50, 20);
 
         lblTelefono.setText("Telefono:");
         getContentPane().add(lblTelefono);
-        lblTelefono.setBounds(70, 270, 80, 20);
+        lblTelefono.setBounds(70, 310, 80, 20);
 
         lblMetododepago.setText("banco:");
         getContentPane().add(lblMetododepago);
-        lblMetododepago.setBounds(80, 240, 110, 20);
+        lblMetododepago.setBounds(90, 270, 110, 10);
 
         lblDireccion.setText("Direccion:");
         getContentPane().add(lblDireccion);
-        lblDireccion.setBounds(60, 210, 60, 20);
+        lblDireccion.setBounds(70, 230, 60, 20);
 
         lblEdad.setText("Edad:");
         getContentPane().add(lblEdad);
-        lblEdad.setBounds(80, 120, 30, 20);
+        lblEdad.setBounds(90, 130, 30, 20);
         getContentPane().add(txtMascota);
-        txtMascota.setBounds(120, 150, 160, 22);
+        txtMascota.setBounds(130, 160, 160, 30);
         getContentPane().add(txtEmail);
-        txtEmail.setBounds(120, 180, 190, 22);
+        txtEmail.setBounds(130, 200, 190, 22);
         getContentPane().add(txtDireccion);
-        txtDireccion.setBounds(120, 210, 190, 22);
-        getContentPane().add(txtId);
-        txtId.setBounds(120, 90, 150, 22);
+        txtDireccion.setBounds(130, 230, 190, 22);
         getContentPane().add(txtEdad);
-        txtEdad.setBounds(120, 120, 50, 22);
+        txtEdad.setBounds(130, 120, 60, 30);
         getContentPane().add(txtMetododepago);
-        txtMetododepago.setBounds(130, 240, 130, 22);
+        txtMetododepago.setBounds(130, 260, 130, 30);
 
         jLabel2.setText("Disponibilidad:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 310, 80, 16);
+        jLabel2.setBounds(40, 360, 90, 16);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(130, 306, 320, 60);
+        jScrollPane1.setBounds(130, 340, 320, 60);
 
         btnRegistrardatos.setText("Registrar datos");
         btnRegistrardatos.addActionListener(this::btnRegistrardatosActionPerformed);
         getContentPane().add(btnRegistrardatos);
-        btnRegistrardatos.setBounds(335, 100, 110, 23);
+        btnRegistrardatos.setBounds(520, 343, 130, 30);
+        getContentPane().add(txtId1);
+        txtId1.setBounds(130, 80, 150, 30);
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setText("Datos Prestador");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(170, 10, 140, 20);
+        getContentPane().add(Tiposervicio);
+        Tiposervicio.setBounds(480, 40, 150, 30);
+
+        jLabel4.setText("Tipo de servicio:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(390, 50, 100, 16);
+
+        jLabel5.setText("Descripcion del servicio:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(340, 100, 140, 16);
+        getContentPane().add(Descripcionservicio);
+        Descripcionservicio.setBounds(480, 90, 150, 30);
+
+        jLabel6.setText("Precio del servicio:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(370, 150, 110, 16);
+        getContentPane().add(Precioservicio);
+        Precioservicio.setBounds(480, 140, 150, 30);
+
+        jLabel7.setText("Duracion del servicio (Hora):");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(360, 190, 160, 16);
+        getContentPane().add(Duracionservicio);
+        Duracionservicio.setBounds(520, 180, 150, 40);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,8 +172,78 @@ public class FormPrestador extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnRegistrardatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrardatosActionPerformed
-        // TODO add your handling code here:
+       try {
+        // ==========================================================
+        // 1. CAPTURAR DATOS DEL SERVICIO
+        // ==========================================================
+        String tipoServicio = Tiposervicio.getText();
+        String descServicio = Descripcionservicio.getText();
+        int precioBaseServicio = Integer.parseInt(Precioservicio.getText());
+        int duracionServicio = Integer.parseInt(Duracionservicio.getText());
+
+        umag.modelo.entidad.Servicio nuevoServicio = new umag.modelo.entidad.Servicio(
+            tipoServicio, descServicio, precioBaseServicio, duracionServicio
+        );
+
+        // ==========================================================
+        // 2. CAPTURAR DATOS DEL PRESTADOR (Usando Long para evitar caídas)
+        // ==========================================================
+        String idPrestador = txtId1.getText();
+        long cedulaPrestador = Long.parseLong(txtMascota.getText());     // <-- Cambiado a Long.parseLong
+        long telefonoPrestador = Long.parseLong(txtTelefono.getText()); // <-- Cambiado a Long.parseLong
+        int edadPrestador = Integer.parseInt(txtEdad.getText());
+        String nombrePrestador = txtNombre.getText();
+        String emailPrestador = txtEmail.getText();
+        String direccionPrestador = txtDireccion.getText();
+        String bancoPrestador = txtMetododepago.getText();           
+        
+        boolean disponibilidadPrestador = !jTextArea1.getText().trim().isEmpty();
+
+        // ==========================================================
+        // 3. ENVIAR AL CONTROLADOR
+        // ==========================================================
+        umag.control.ControlPrestador cp = new umag.control.ControlPrestador();
+        
+        boolean registrado = cp.guardarPrestador(
+            idPrestador, cedulaPrestador, telefonoPrestador, edadPrestador, nombrePrestador, 
+            emailPrestador, direccionPrestador, bancoPrestador, disponibilidadPrestador, nuevoServicio
+        );
+
+        // ==========================================================
+        // 4. RETROALIMENTACIÓN
+        // ==========================================================
+        if (registrado) {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Prestador y Servicio guardados exitosamente!");
+            
+            // Limpieza de campos
+            Tiposervicio.setText("");
+            Descripcionservicio.setText("");
+            Precioservicio.setText("");
+            Duracionservicio.setText("");
+            txtNombre.setText("");
+            txtId1.setText("");
+            txtEdad.setText("");
+            txtMascota.setText("");
+            txtEmail.setText("");
+            txtDireccion.setText("");
+            txtMetododepago.setText("");
+            txtTelefono.setText("");
+            jTextArea1.setText("");
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error: No se pudo escribir en el archivo .dat.", "Error de Almacenamiento", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+
+    } catch (NumberFormatException ex) {
+        javax.swing.JOptionPane.showMessageDialog(this, 
+            "Error de formato: Revisa que los campos numéricos no tengan letras o espacios.", 
+            "Error de Entrada", 
+            javax.swing.JOptionPane.ERROR_MESSAGE);
+    }
     }//GEN-LAST:event_btnRegistrardatosActionPerformed
+
+    private void txtTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTelefonoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,9 +271,18 @@ public class FormPrestador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Descripcionservicio;
+    private javax.swing.JTextField Duracionservicio;
+    private javax.swing.JTextField Precioservicio;
+    private javax.swing.JTextField Tiposervicio;
     private javax.swing.JButton btnRegistrardatos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel lblDireccion;
@@ -177,7 +296,7 @@ public class FormPrestador extends javax.swing.JFrame {
     private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtId1;
     private javax.swing.JTextField txtMascota;
     private javax.swing.JTextField txtMetododepago;
     private javax.swing.JTextField txtNombre;

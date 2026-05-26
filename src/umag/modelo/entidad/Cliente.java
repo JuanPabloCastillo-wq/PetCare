@@ -17,7 +17,6 @@ public class Cliente implements Serializable{
     private Mascota mascota;
     private String email;
     private String direccion;
-    
     private int teléfono;
 
     public Cliente(String id, int edad, String nombre, Mascota mascota, String email, String direccion,  int teléfono) {

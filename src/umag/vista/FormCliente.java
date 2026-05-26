@@ -4,9 +4,12 @@
  */
 package umag.vista;
 
+import umag.modelo.entidad.Cliente;
+import umag.modelo.entidad.Mascota;
+
 /**
  *
- * @author LENOVO
+ * @author Castillo
  */
 public class FormCliente extends javax.swing.JFrame {
     
@@ -28,134 +31,287 @@ public class FormCliente extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        lblNombre = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
-        lblEmail = new javax.swing.JLabel();
-        txtTelefono = new javax.swing.JTextField();
-        lblId = new javax.swing.JLabel();
-        lblMascota = new javax.swing.JLabel();
-        lblTelefono = new javax.swing.JLabel();
-        lblMetododepago = new javax.swing.JLabel();
-        lblDireccion = new javax.swing.JLabel();
-        lblEdad = new javax.swing.JLabel();
-        txtMascota = new javax.swing.JTextField();
-        txtEmail = new javax.swing.JTextField();
-        txtDireccion = new javax.swing.JTextField();
-        txtId = new javax.swing.JTextField();
-        txtEdad = new javax.swing.JTextField();
-        txtMetododepago = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        lblNombre1 = new javax.swing.JLabel();
-        txtNombre1 = new javax.swing.JTextField();
-        lblEmail1 = new javax.swing.JLabel();
-        txtTelefono1 = new javax.swing.JTextField();
-        lblId1 = new javax.swing.JLabel();
-        lblMascota1 = new javax.swing.JLabel();
-        lblTelefono1 = new javax.swing.JLabel();
-        lblMetododepago1 = new javax.swing.JLabel();
-        lblDireccion1 = new javax.swing.JLabel();
-        lblEdad1 = new javax.swing.JLabel();
-        txtMascota1 = new javax.swing.JTextField();
-        txtEmail1 = new javax.swing.JTextField();
-        txtDireccion1 = new javax.swing.JTextField();
-        txtId1 = new javax.swing.JTextField();
-        txtEdad1 = new javax.swing.JTextField();
-        txtMetododepago1 = new javax.swing.JTextField();
+        Nombre = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        Id = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        Edad = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        Mascota = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        Email = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        Direccion = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        Telefono = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        Nombre2 = new javax.swing.JLabel();
+        NombreMascota = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        IdMascota = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        EdadMascota = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        Especie = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        Peso = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        Raza = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        InfoMedica = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("Datos Cliente");
-
-        lblNombre.setText("Nombre:");
-
-        txtNombre.addActionListener(this::txtNombreActionPerformed);
-
-        lblEmail.setText("Email:");
-
-        lblId.setText("Id:");
-
-        lblMascota.setText("Macota:");
-
-        lblTelefono.setText("Telefono:");
-
-        lblMetododepago.setText("Metodo de pago:");
-
-        lblDireccion.setText("Direccion:");
-
-        lblEdad.setText("Edad:");
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(null);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Datos Cliente");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(170, 10, 110, 25);
 
-        lblNombre1.setText("Nombre:");
-        getContentPane().add(lblNombre1);
-        lblNombre1.setBounds(60, 60, 50, 16);
+        jLabel1.setText("Nombre:");
 
-        txtNombre1.addActionListener(this::txtNombre1ActionPerformed);
-        getContentPane().add(txtNombre1);
-        txtNombre1.setBounds(120, 60, 200, 22);
+        jLabel3.setText("Id:");
 
-        lblEmail1.setText("Email:");
-        getContentPane().add(lblEmail1);
-        lblEmail1.setBounds(80, 180, 40, 20);
-        getContentPane().add(txtTelefono1);
-        txtTelefono1.setBounds(130, 270, 180, 22);
+        jLabel4.setText("Edad:");
 
-        lblId1.setText("Id:");
-        getContentPane().add(lblId1);
-        lblId1.setBounds(90, 90, 30, 20);
+        jLabel5.setText("Mascota:");
 
-        lblMascota1.setText("Macota:");
-        getContentPane().add(lblMascota1);
-        lblMascota1.setBounds(70, 150, 50, 20);
+        jLabel6.setText("Email:");
 
-        lblTelefono1.setText("Telefono:");
-        getContentPane().add(lblTelefono1);
-        lblTelefono1.setBounds(70, 270, 80, 20);
+        Email.addActionListener(this::EmailActionPerformed);
 
-        lblMetododepago1.setText("Metodo de pago:");
-        getContentPane().add(lblMetododepago1);
-        lblMetododepago1.setBounds(30, 240, 110, 20);
+        jLabel7.setText("Direccion:");
 
-        lblDireccion1.setText("Direccion:");
-        getContentPane().add(lblDireccion1);
-        lblDireccion1.setBounds(60, 210, 60, 20);
+        jLabel9.setText("Telefono:");
 
-        lblEdad1.setText("Edad:");
-        getContentPane().add(lblEdad1);
-        lblEdad1.setBounds(80, 120, 30, 20);
-        getContentPane().add(txtMascota1);
-        txtMascota1.setBounds(120, 150, 90, 22);
-        getContentPane().add(txtEmail1);
-        txtEmail1.setBounds(120, 180, 190, 22);
-        getContentPane().add(txtDireccion1);
-        txtDireccion1.setBounds(120, 210, 190, 22);
-        getContentPane().add(txtId1);
-        txtId1.setBounds(120, 90, 150, 22);
-        getContentPane().add(txtEdad1);
-        txtEdad1.setBounds(120, 120, 50, 22);
-        getContentPane().add(txtMetododepago1);
-        txtMetododepago1.setBounds(130, 240, 130, 22);
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel10.setText("Datos Mascota");
+
+        Nombre2.setText("Nombre:");
+
+        NombreMascota.addActionListener(this::NombreMascotaActionPerformed);
+
+        jLabel11.setText("Id:");
+
+        jLabel12.setText("Edad:");
+
+        jLabel13.setText("Especie:");
+
+        jLabel14.setText("Peso (Kg):");
+
+        jLabel15.setText("Raza:");
+
+        jLabel16.setText("Informacion Medica:");
+
+        jButton1.setText("Registrar Datos");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Id, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Edad, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Mascota, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Email, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(18, 18, 18)
+                                .addComponent(Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(43, 43, 43)
+                        .addComponent(jButton1)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(InfoMedica, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Nombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(IdMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EdadMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(NombreMascota, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Especie, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Raza, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Peso, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(15, 15, 15))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(123, 123, 123))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel10))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1)
+                    .addComponent(Nombre2)
+                    .addComponent(NombreMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Id, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel11)
+                    .addComponent(IdMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Edad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel12)
+                    .addComponent(EdadMascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Mascota, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel13)
+                    .addComponent(Especie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel14)
+                        .addComponent(Peso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(Direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15)
+                    .addComponent(Raza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel16))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1)
+                        .addGap(0, 12, Short.MAX_VALUE))
+                    .addComponent(InfoMedica, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+    private void EmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
+    }//GEN-LAST:event_EmailActionPerformed
 
-    private void btnRegistrardatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrardatosActionPerformed
+    private void NombreMascotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreMascotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrardatosActionPerformed
+    }//GEN-LAST:event_NombreMascotaActionPerformed
 
-    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+    
+    // 1. CAPTURAR DATOS DE LA MASCOTA
+    
+    String razaMascota = Raza.getText();
+    String nombreMascotaStr = NombreMascota.getText();
+    int edadMascotaInt = Integer.parseInt(EdadMascota.getText());
+    String especieMascota = Especie.getText();
+    double pesoMascota = Double.parseDouble(Peso.getText());
+    String infoMedicaStr = InfoMedica.getText();
+    String idMascotaStr = IdMascota.getText();
+
+    
+    Mascota nuevaMascota = new Mascota(razaMascota, nombreMascotaStr, edadMascotaInt, especieMascota, pesoMascota, infoMedicaStr, idMascotaStr);
+
+    
+    // 2. CAPTURAR DATOS DEL CLIENTE
+    
+    String idClienteStr = Id.getText();
+    int edadClienteInt = Integer.parseInt(Edad.getText());
+    String nombreClienteStr = Nombre.getText();
+    String emailClienteStr = Email.getText();
+    String direccionClienteStr = Direccion.getText();
+    int telefonoClienteInt = Integer.parseInt(Telefono.getText());
+
+    
+    // 3. ENVIAR A LOS CONTROLADORES
+    boolean mascotaGuardada = umag.control.ControlMascota.getInstance().guardarMascota(
+    razaMascota, 
+    nombreMascotaStr, 
+    edadMascotaInt, 
+    especieMascota, 
+    pesoMascota, 
+    infoMedicaStr, 
+    idMascotaStr
+    );
+    
+    umag.control.ControlCliente cc = new umag.control.ControlCliente();
+    boolean registrado = cc.guardarCliente(idClienteStr, edadClienteInt, nombreClienteStr, nuevaMascota, emailClienteStr, direccionClienteStr, telefonoClienteInt);
+
+    if (registrado) {
+        javax.swing.JOptionPane.showMessageDialog(this, "¡Cliente y Mascota guardados exitosamente!");
+        this.dispose();
+    } else {
+        javax.swing.JOptionPane.showMessageDialog(this, "Error: No se pudo guardar el cliente.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+    }
+
+} catch (NumberFormatException ex) {
+    javax.swing.JOptionPane.showMessageDialog(this, 
+        "Error: Por favor verifica que Edad, Peso y Teléfono contengan valores numéricos válidos y no estén vacíos.", 
+        "Error de Formato", 
+        javax.swing.JOptionPane.ERROR_MESSAGE);
+}
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,41 +337,40 @@ public class FormCliente extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new FormCliente().setVisible(true));
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Direccion;
+    private javax.swing.JTextField Edad;
+    private javax.swing.JTextField EdadMascota;
+    private javax.swing.JTextField Email;
+    private javax.swing.JTextField Especie;
+    private javax.swing.JTextField Id;
+    private javax.swing.JTextField IdMascota;
+    private javax.swing.JTextField InfoMedica;
+    private javax.swing.JTextField Mascota;
+    private javax.swing.JTextField Nombre;
+    private javax.swing.JLabel Nombre2;
+    private javax.swing.JTextField NombreMascota;
+    private javax.swing.JTextField Peso;
+    private javax.swing.JTextField Raza;
+    private javax.swing.JTextField Telefono;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel lblDireccion;
-    private javax.swing.JLabel lblDireccion1;
-    private javax.swing.JLabel lblEdad;
-    private javax.swing.JLabel lblEdad1;
-    private javax.swing.JLabel lblEmail;
-    private javax.swing.JLabel lblEmail1;
-    private javax.swing.JLabel lblId;
-    private javax.swing.JLabel lblId1;
-    private javax.swing.JLabel lblMascota;
-    private javax.swing.JLabel lblMascota1;
-    private javax.swing.JLabel lblMetododepago;
-    private javax.swing.JLabel lblMetododepago1;
-    private javax.swing.JLabel lblNombre;
-    private javax.swing.JLabel lblNombre1;
-    private javax.swing.JLabel lblTelefono;
-    private javax.swing.JLabel lblTelefono1;
-    private javax.swing.JTextField txtDireccion;
-    private javax.swing.JTextField txtDireccion1;
-    private javax.swing.JTextField txtEdad;
-    private javax.swing.JTextField txtEdad1;
-    private javax.swing.JTextField txtEmail;
-    private javax.swing.JTextField txtEmail1;
-    private javax.swing.JTextField txtId;
-    private javax.swing.JTextField txtId1;
-    private javax.swing.JTextField txtMascota;
-    private javax.swing.JTextField txtMascota1;
-    private javax.swing.JTextField txtMetododepago;
-    private javax.swing.JTextField txtMetododepago1;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtNombre1;
-    private javax.swing.JTextField txtTelefono;
-    private javax.swing.JTextField txtTelefono1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
