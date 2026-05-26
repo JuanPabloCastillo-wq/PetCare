@@ -58,6 +58,7 @@ public class FormPrestador extends javax.swing.JFrame {
         Precioservicio = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         Duracionservicio = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -164,6 +165,11 @@ public class FormPrestador extends javax.swing.JFrame {
         getContentPane().add(Duracionservicio);
         Duracionservicio.setBounds(520, 180, 150, 40);
 
+        jButton1.setText("Volver al Menu");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
+        getContentPane().add(jButton1);
+        jButton1.setBounds(640, 10, 109, 23);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -229,6 +235,8 @@ public class FormPrestador extends javax.swing.JFrame {
             txtMetododepago.setText("");
             txtTelefono.setText("");
             jTextArea1.setText("");
+            new FormAtenderSolicitudes().setVisible(true); // Abre la ventana del Prestador
+            this.dispose(); // Cierra el FormPrestador
         } else {
             javax.swing.JOptionPane.showMessageDialog(this, "Error: No se pudo escribir en el archivo .dat.", "Error de Almacenamiento", javax.swing.JOptionPane.ERROR_MESSAGE);
         }
@@ -244,6 +252,12 @@ public class FormPrestador extends javax.swing.JFrame {
     private void txtTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTelefonoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTelefonoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        FormMenu menu = new FormMenu(); 
+menu.setVisible(true); // Muestra el menú
+this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -276,6 +290,7 @@ public class FormPrestador extends javax.swing.JFrame {
     private javax.swing.JTextField Precioservicio;
     private javax.swing.JTextField Tiposervicio;
     private javax.swing.JButton btnRegistrardatos;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

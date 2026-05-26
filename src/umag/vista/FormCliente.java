@@ -63,6 +63,7 @@ public class FormCliente extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         InfoMedica = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -107,6 +108,9 @@ public class FormCliente extends javax.swing.JFrame {
         jButton1.setText("Registrar Datos");
         jButton1.addActionListener(this::jButton1ActionPerformed);
 
+        jButton2.setText("Volver al menu");
+        jButton2.addActionListener(this::jButton2ActionPerformed);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -148,7 +152,9 @@ public class FormCliente extends javax.swing.JFrame {
                                         .addComponent(Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(43, 43, 43)
-                        .addComponent(jButton1)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2)
+                            .addComponent(jButton1))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -231,19 +237,22 @@ public class FormCliente extends javax.swing.JFrame {
                     .addComponent(jLabel15)
                     .addComponent(Raza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel9)
                             .addComponent(Telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16))
                         .addGap(18, 18, 18)
                         .addComponent(jButton1)
-                        .addGap(0, 12, Short.MAX_VALUE))
-                    .addComponent(InfoMedica, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2)
+                        .addContainerGap(13, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(InfoMedica, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         pack();
@@ -317,6 +326,7 @@ if (mascotaDuplicada) {
 
     if (registrado) {
         javax.swing.JOptionPane.showMessageDialog(this, "¡Cliente y Mascota guardados exitosamente!");
+        new FormSolicitud().setVisible(true); // Abre la siguiente ventana
         this.dispose();
     } else {
         javax.swing.JOptionPane.showMessageDialog(this, "Error: No se pudo guardar el cliente.", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
@@ -329,6 +339,12 @@ if (mascotaDuplicada) {
         javax.swing.JOptionPane.ERROR_MESSAGE);
 }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        FormMenu menu = new FormMenu(); 
+    menu.setVisible(true); // Muestra el menú
+    this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -373,6 +389,7 @@ if (mascotaDuplicada) {
     private javax.swing.JTextField Raza;
     private javax.swing.JTextField Telefono;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
